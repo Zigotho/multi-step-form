@@ -1,34 +1,22 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { StepInfo } from './components/StepInfo/StepInfo'
+import { HandleSteps } from './components/Steps/HandleSteps'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [currentStep] = useState(2)
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div
+      id="root"
+      className="bg-bg flex w-screen h-screen items-center justify-center"
+    >
+      <div
+        id="container"
+        className="flex w-[940px] h-[600px] bg-white rounded-2xl p-4 shadow-[0_25px_40px_-20px_rgba(0,0,0,0.1)] gap-40"
+      >
+        <StepInfo currentStep={currentStep} />
+        <HandleSteps currentStep={currentStep} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
