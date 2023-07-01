@@ -6,14 +6,15 @@ import { RoseSVG } from '../svgs/Rose'
 
 interface StepInfoProps {
   currentStep: number
+  setCurrentStep: (step: number) => void
 }
-export const StepInfo = ({ currentStep }: StepInfoProps) => {
+export const StepInfo = ({ currentStep, setCurrentStep }: StepInfoProps) => {
   return (
     <div
       id="info-card"
-      className="bg-infoCardBg w-[35rem] h-auto rounded-lg relative"
+      className="bg-infoCardBg w-72 h-auto rounded-lg relative"
     >
-      <Steps currentStep={currentStep} />
+      <Steps setCurrentStep={setCurrentStep} currentStep={currentStep} />
       <div className="absolute bottom-0 left-0">
         <DemiluneSvg />
       </div>

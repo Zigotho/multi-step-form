@@ -12,6 +12,8 @@ export default {
         skyBlue: '#BEE2FD',
         denim: '#022959',
         lightBlue: '#ABBCFF',
+        grey: '#9699AA',
+        borderColor: '#D6D9E6',
       },
       fontFamily: {
         sans: ['Ubuntu', 'sans-serif'],
