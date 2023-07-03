@@ -29,7 +29,7 @@ function App() {
             onClick={handleNextStep}
             className="rounded-lg bg-denim px-6 py-4 text-white absolute bottom-4 right-4"
           >
-            Next Step
+            Next Steps
           </button>
         </div>
       </div>
